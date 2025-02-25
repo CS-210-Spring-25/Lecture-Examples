@@ -4,15 +4,15 @@ Here you can find the example code used in lecture.
 
 ## L6
 
-- popcnt.s
+- popcnt1.s
 
 ## L7
 
-- addv1.s
-- addv2.s
-- addv3.s
+- popcnt2.s
+- popcnt3.s
 
 ## L8
 
 - mov.s
 - movend.s
+- movex.s
