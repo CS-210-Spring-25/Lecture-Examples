@@ -1,4 +1,10 @@
-all: movend movex popcnt1 popcnt2 popcnt3 
+all: mov movend movex popcnt1 popcnt2 popcnt3 
+
+mov: mov.o
+	ld -g mov.o -o mov
+
+mov.o: mov.s
+	as -g mov.s -o mov.o
 
 movend: movend.o
 	ld -g movend.o -o movend
@@ -31,4 +37,4 @@ popcnt3.o: popcnt3.s
 	as -g popcnt3.s -o popcnt3.o
 
 clean:
-	-rm -f $(wildcard *.o popcnt1 popcnt2 popcnt3 movend movex)
+	-rm -f $(wildcard *.o mov popcnt1 popcnt2 popcnt3 movend movex)
