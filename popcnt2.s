@@ -7,3 +7,4 @@ _start:
         popcnt rax, rbx
 
         int3
+	

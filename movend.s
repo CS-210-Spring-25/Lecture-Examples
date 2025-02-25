@@ -1,7 +1,6 @@
 	.intel_syntax noprefix
 
 	.data
-
 MYBYTES:    
 	.quad 0xdeadbeefdeadbeef
 	
@@ -17,27 +16,27 @@ _start:
 
 	
 BYTES:
-	mov rbx, BYTE PTR[MYBYTES]
-	mov rbx, BYTE PTR[MYBYTES + 1]
-	mov rbx, BYTE PTR[MYBYTES + 2]
-	mov rbx, BYTE PTR[MYBYTES + 3]
-	mov rbx, BYTE PTR[MYBYTES + 4]
-	mov rbx, BYTE PTR[MYBYTES + 5]
-	mov rbx, BYTE PTR[MYBYTES + 6]
-	mov rbx, BYTE PTR[MYBYTES + 7]
+	mov bl, BYTE PTR [MYBYTES]
+	mov bl, BYTE PTR [MYBYTES + 1]
+	mov bl, BYTE PTR [MYBYTES + 2]
+	mov bl, BYTE PTR [MYBYTES + 3]
+	mov bl, BYTE PTR [MYBYTES + 4]
+	mov bl, BYTE PTR [MYBYTES + 5]
+	mov bl, BYTE PTR [MYBYTES + 6]
+	mov bl, BYTE PTR [MYBYTES + 7]
 
 WORDS:
-	mov rbx, WORD PTR[MYBYTES]
-	mov rbx, WORD PTR[MYBYTES + 2]
-	mov rbx, WORD PTR[MYBYTES + 4]
-	mov rbx, WORD PTR[MYBYTES + 6]
+	mov bx, WORD PTR [MYBYTES]
+	mov bx, WORD PTR [MYBYTES + 2]
+	mov bx, WORD PTR [MYBYTES + 4]
+	mov bx, WORD PTR [MYBYTES + 6]
 
 DWORDS:
-	mov rbx, DWORD PTR[MYBYTES]
-	mov rbx, DWORD PTR[MYBYTES + 4]
+	mov ebx, DWORD PTR [MYBYTES]
+	mov ebx, DWORD PTR [MYBYTES + 4]
 
 QWORD:
-	mov rbx, QWORD PTR[MYBYTES]
+	mov rbx, QWORD PTR [MYBYTES]
 
 	int3
 	

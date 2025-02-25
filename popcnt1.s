@@ -5,3 +5,4 @@
         .global _start
 _start:
         popcnt rax, rbx
+	
