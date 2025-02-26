@@ -16,3 +16,7 @@ Here you can find the example code used in lecture.
 - mov.s
 - movend.s
 - movex.s
+
+## General
+
+- setup.gdb
