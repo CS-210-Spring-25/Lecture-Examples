@@ -1,4 +1,13 @@
-all: mov movend movex popcnt1 popcnt2 popcnt3 
+all: usesum  mov movend movex popcnt1 popcnt2 popcnt3 
+
+usesum: usesum.o sumit.o
+	ld -g usesum.o sumit.o -o usesum
+
+usesum.o: usesum.s
+	as -g usesum.s -o usesum.o
+
+sumit.o: sumit.s
+	as -g sumit.s -o sumit.o
 
 mov: mov.o
 	ld -g mov.o -o mov
@@ -37,4 +46,4 @@ popcnt3.o: popcnt3.s
 	as -g popcnt3.s -o popcnt3.o
 
 clean:
-	-rm -f $(wildcard *.o mov popcnt1 popcnt2 popcnt3 movend movex)
+	-rm -f $(wildcard *.o usesum mov popcnt1 popcnt2 popcnt3 movend movex)
