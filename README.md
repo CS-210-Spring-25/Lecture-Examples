@@ -17,6 +17,13 @@ Here you can find the example code used in lecture.
 - movend.s
 - movex.s
 
+## L9
+
+- sumit.s
+- usesum.s
+- 10num.txt (ASCII file of values to add)
+- 10num.bin (10num.txt coverted binary in memory load format - use within GDB to set up array values)
+
 ## General
 
 - setup.gdb
