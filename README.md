@@ -21,8 +21,7 @@ Here you can find the example code used in lecture.
 
 - sumit.s
 - usesum.s
-- 10num.txt (ASCII file of values to add)
-- 10num.bin (10num.txt coverted binary in memory load format - use within GDB to set up array values)
+- 10num.txt (ASCII file of values to add, need to convert to a .bin file)
 
 ## General
 
