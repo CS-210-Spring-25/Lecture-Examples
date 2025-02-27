@@ -1,4 +1,7 @@
-all: usesum  mov movend movex popcnt1 popcnt2 popcnt3 
+all: usesum  mov movend movex popcnt1 popcnt2 popcnt3 10num.bin 
+
+10num.bin: 10num.txt
+	ascii2binary -t sq < 10num.txt > 10num.bin
 
 usesum: usesum.o sumit.o
 	ld -g usesum.o sumit.o -o usesum
@@ -46,4 +49,4 @@ popcnt3.o: popcnt3.s
 	as -g popcnt3.s -o popcnt3.o
 
 clean:
-	-rm -f $(wildcard *.o usesum mov popcnt1 popcnt2 popcnt3 movend movex)
+	-rm -f $(wildcard *.o usesum mov popcnt1 popcnt2 popcnt3 movend movex 10num.bin)
