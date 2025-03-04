@@ -13,11 +13,13 @@ XARRAY_LEN:
 	.comm sum, 8, 8 	# space to store final sum
 
 	.section .text
+ 	.global end_sum
 	.global _start
 _start:
 	mov rbx, QWORD PTR [XARRAY_LEN]
 
 	jmp sumIt
+ end_sum:
 	mov QWORD PTR [sum], rax
 
 	int3
