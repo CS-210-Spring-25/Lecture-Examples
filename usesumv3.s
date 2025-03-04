@@ -17,16 +17,32 @@
 _start:
 	mov rbx, QWORD PTR [A_LEN]
 	mov rcx, OFFSET A
-	call sumIt
+	push rdx
+	mov rdx, OFFSET RETURN_1
+	jmp sumIt
+RETURN_1:
+	pop rdx
 	mov QWORD PTR [A_SUM], rax
 
 	mov rbx, QWORD PTR [B_LEN]
 	mov rcx, OFFSET B
-	call sumIt
+	push rdx
+	mov rdx, OFFSET RETURN_2
+	jmp sumIt
+RETURN_2:
+	pop rdx
 	mov QWORD PTR [B_SUM], rax
 
 	mov rbx, QWORD PTR [C_LEN]
 	mov rcx, OFFSET C
-	call sumIt
+	push rdx
+	mov rdx, OFFSET RETURN_3	
+	jmp sumIt
+RETURN_3:
+	pop rdx
 	mov QWORD PTR [C_SUM], rax
 	int3
+
+	.global RETURN_1
+	.global RETURN_2
+	.global RETURN_3
