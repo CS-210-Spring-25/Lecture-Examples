@@ -1,4 +1,22 @@
-all: usesum  mov movend movex popcnt1 popcnt2 popcnt3 10num.bin 
+all: read hello pow usesum  mov movend movex popcnt1 popcnt2 popcnt3 10num.bin 
+
+read: read.o
+	ld -g read.o -o read
+
+read.o: read.s
+	as -g read.s -o read.o
+
+hello: hello.o
+	ld -g hello.o -o hello
+
+hello.o: hello.s
+	as -g hello.s -o hello.o
+
+pow: pow.o
+	ld -g pow.o -o pow
+
+pow.o: pow.s
+	as -g pow.s -o pow.o
 
 10num.bin: 10num.txt
 	ascii2binary -t sq < 10num.txt > 10num.bin
@@ -49,4 +67,4 @@ popcnt3.o: popcnt3.s
 	as -g popcnt3.s -o popcnt3.o
 
 clean:
-	-rm -f $(wildcard *.o usesum mov popcnt1 popcnt2 popcnt3 movend movex 10num.bin)
+	-rm -f $(wildcard *.o read hello pow usesum mov popcnt1 popcnt2 popcnt3 movend movex 10num.bin)
