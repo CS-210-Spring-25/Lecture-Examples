@@ -1,0 +1,1 @@
+valgrind --tool=cachegrind --cache-sim=yes ./sequential
