@@ -1,0 +1,5 @@
+time ./matmul matrix1.bin 2000 2000 matrix2.bin 2000 2000
+
+time ./matmul-o1 matrix1.bin 2000 2000 matrix2.bin 2000 2000
+time ./matmul-o2 matrix1.bin 2000 2000 matrix2.bin 2000 2000
+time ./matmul-o3 matrix1.bin 2000 2000 matrix2.bin 2000 2000

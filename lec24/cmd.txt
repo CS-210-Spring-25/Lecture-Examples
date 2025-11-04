@@ -1,0 +1,2 @@
+valgrind --tool=cachegrind --cache-sim=yes ./matmul1 matrix1.bin 500 500 matrix2.bin 500 500
+valgrind --tool=cachegrind --cache-sim=yes ./matmul matrix1.bin 500 500 matrix2.bin 500 500

@@ -16,4 +16,5 @@ int main(void) {
   }
 
   printf("sum: %d\n", sum);
+  free(A);
 }

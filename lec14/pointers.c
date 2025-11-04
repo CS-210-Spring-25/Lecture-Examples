@@ -2,7 +2,7 @@
 
 int main(void) {
   int i = 5;
-  int* ip = &i;
+  int *ip = &i;
 
   printf("i is: %d\n",i);
   printf("ip is %p\n",ip);

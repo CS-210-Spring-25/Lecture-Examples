@@ -1,0 +1,3 @@
+time python3 matmul.py matrix1-1000.bin 1000 1000 matrix2-1000.bin 1000 1000
+time ./matmul1 matrix1-1000.bin 1000 1000 matrix2-1000.bin 1000 1000
+

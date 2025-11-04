@@ -8,6 +8,7 @@ int mul(long long temp, long long iters) {
 }
 
 int main(void) {
-  long long final = mul(4,4);
+  long long final = mul(3,3);
   printf("final: %lld\n", final);
 }
+

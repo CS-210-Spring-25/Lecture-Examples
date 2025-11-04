@@ -19,10 +19,7 @@ void add_node(trie *root, char* word) {
 		root->next[(int)word[i]] = calloc(1, sizeof(struct tree_node));
 		root = root->next[(int)word[i]];
 		i++;
-	}
-
-	printf("added word %s %d\n", word, i);
-	
+	}	
 	root->data += 1;
 }
 
@@ -120,7 +117,7 @@ int main(void) {
 	fclose(fptr);
 
 	char buffer[256];
-    print_trie(root, buffer, 0);
+	print_trie(root, buffer, 0);
 
 	autocomplete(root);
 }

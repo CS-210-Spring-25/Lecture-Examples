@@ -1,4 +1,4 @@
-$	.file	"recurse.c"
+	.file	"recurse.c"
 	.intel_syntax noprefix
 	.text
 	.globl	mul
@@ -24,8 +24,7 @@ mul:
 	mov	rax, QWORD PTR [rbp-8]
 	add	eax, edx
 .L3:
-	mov rsp, rbp
-	pop rbp
+	leave
 	ret
 	.size	mul, .-mul
 	.section	.rodata
@@ -38,8 +37,8 @@ main:
 	push	rbp
 	mov	rbp, rsp
 	sub	rsp, 16
-	mov	esi, 4
-	mov	edi, 4
+	mov	esi, 3
+	mov	edi, 3
 	call	mul
 	cdqe
 	mov	QWORD PTR [rbp-8], rax
